@@ -9,6 +9,7 @@
 #import "BlogLinkCell.h"
 #import "LinkTypeView.h"
 #import "LinkModel.h"
+#import "MainView.h"
 
 @implementation BlogLinkCell
 

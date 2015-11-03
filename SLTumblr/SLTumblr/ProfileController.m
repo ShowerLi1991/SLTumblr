@@ -12,10 +12,13 @@
 #import "MyPostsViewController.h"
 #import "MyFollowingViewController.h"
 #import "MyFollowersViewController.h"
+#import "AudioPlayerController.h"
 
 @interface ProfileController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSArray * array;
+
+@property (strong, nonatomic) UITabBarController * tabBarViewController;
 
 @end
 
@@ -43,7 +46,8 @@
                    @{@"title" : @"Followers"},
                    @{@"title" : @"Drafts"},
                    @{@"title" : @"Queue"},
-                   @{@"title" : @"福利"}
+                   @{@"title" : @"福利"},
+                   @{@"title" : @"Player"}
                 ],
 
                @[
@@ -87,6 +91,20 @@
     return cell;
 }
 
+- (UITabBarController *)tabBarViewController {
+    if (_tabBarViewController == nil) {
+        UIResponder * responder = self.nextResponder;
+        while (1) {
+            responder = responder.nextResponder;
+            if ([responder isKindOfClass:[UITabBarController class]]) {
+                break;
+            }
+        }
+        _tabBarViewController = (UITabBarController *)responder;
+    }
+    return _tabBarViewController;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0 && indexPath.row == 0) {
         [self.navigationController pushViewController:[[MyPostsViewController alloc] init] animated:true];
@@ -94,6 +112,11 @@
         [self.navigationController pushViewController:[[MyFollowingViewController alloc] init] animated:true];
     } else if (indexPath.section == 0 && indexPath.row == 2) {
         [self.navigationController pushViewController:[[MyFollowersViewController alloc] init] animated:true];
+    }
+    
+    
+    else if (indexPath.section == 0 && indexPath.row == 6) {
+        [self.tabBarViewController presentViewController:[AudioPlayerController sharedAudioPlayerController] animated:true completion:nil];
     }
     
 }

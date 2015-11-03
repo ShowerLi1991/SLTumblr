@@ -12,6 +12,14 @@
 
 @implementation FollowViewController
 
+- (instancetype)init {
+    self = [super init];
+    if (self != nil) {
+        self.hidesBottomBarWhenPushed = true;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

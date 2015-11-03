@@ -11,6 +11,8 @@
 #import "BaseCell.h"
 #import "BlogInfoHeaderView.h"
 #import "GeometricParameters.h"
+#import "BlogInfo.h"
+#import "InfoView.h"
 
 
 @interface BlogController ()

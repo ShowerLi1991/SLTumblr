@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BlogInfo.h"
 
-
+@class BlogInfo;
 @interface BlogInfoHeaderView : UICollectionReusableView
 
 

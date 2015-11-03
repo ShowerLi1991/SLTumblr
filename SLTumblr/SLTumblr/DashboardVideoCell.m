@@ -10,6 +10,7 @@
 #import "UIImageView+WebCache.h"
 #import "VideoModel.h"
 #import "VideoTypeView.h"
+#import "MainView.h"
 
 @implementation DashboardVideoCell
 

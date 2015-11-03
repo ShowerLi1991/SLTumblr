@@ -9,12 +9,16 @@
 #import "MyPostsViewController.h"
 #import "SLTumblrSDK.h"
 #import "BaseCell.h"
+#import "InfoView.h"
+
 
 @interface MyPostsViewController ()
 
 @end
 
 @implementation MyPostsViewController
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

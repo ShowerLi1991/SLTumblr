@@ -8,6 +8,7 @@
 
 #import "MyFollowersViewController.h"
 #import "FollowersTableViewCell.h"
+#import "BlogController.h"
 
 @interface MyFollowersViewController ()
 
@@ -34,6 +35,17 @@
     }
     cell.model = self.followModels[indexPath.row];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSString * name = [self.followModels[indexPath.row] name];
+    
+    if (name.length > 0) {
+        BlogController * blog = [BlogController blogControllerWithBlogName:name];
+        blog.navigationItem.title = name;
+        [self.navigationController pushViewController:blog animated:true];
+    }
 }
 
 @end

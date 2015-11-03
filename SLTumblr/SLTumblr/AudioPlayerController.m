@@ -18,6 +18,14 @@
 
 @implementation AudioPlayerController
 
+- (instancetype)init {
+    self = [super init];
+    if (self != nil) {
+        self.hidesBottomBarWhenPushed = true;
+    }
+    return self;
+}
+
 + (instancetype)sharedAudioPlayerController {
     static id instance;
     static dispatch_once_t onceToken;

@@ -9,6 +9,7 @@
 #import "DashboardQuoteCell.h"
 #import "QuoteTypeView.h"
 #import "QuoteModel.h"
+#import "MainView.h"
 
 @implementation DashboardQuoteCell
 

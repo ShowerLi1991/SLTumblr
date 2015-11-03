@@ -12,6 +12,7 @@
 #import "SLTumblrSDK.h"
 #import "UIImageView+WebCache.h"
 #import "GeometricParameters.h"
+#import "MainView.h"
 
 
 @implementation DashboardAnswerCell

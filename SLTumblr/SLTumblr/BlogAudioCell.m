@@ -9,6 +9,8 @@
 #import "BlogAudioCell.h"
 #import "AudioModel.h"
 #import "AudioTypeView.h"
+#import "MainView.h"
+
 
 @implementation BlogAudioCell
 

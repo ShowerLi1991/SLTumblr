@@ -9,6 +9,8 @@
 #import "DashboardAudioCell.h"
 #import "AudioModel.h"
 #import "AudioTypeView.h"
+#import "MainView.h"
+
 
 @implementation DashboardAudioCell
 

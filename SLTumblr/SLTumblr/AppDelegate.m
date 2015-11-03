@@ -92,6 +92,7 @@
 - (void)goToTabBarController {
     TabBarController * tabBarController = [[TabBarController alloc] init];
     tabBarController.view.alpha = 0;
+//    UINavigationController * navTabBarController = [[UINavigationController alloc] initWithRootViewController:tabBarController];
     self.window.rootViewController = tabBarController;
     [self.window bringSubviewToFront:self.maskView];
     

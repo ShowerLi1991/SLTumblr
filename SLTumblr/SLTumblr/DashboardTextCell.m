@@ -9,6 +9,7 @@
 #import "DashboardTextCell.h"
 #import "TextModel.h"
 #import "TextTypeView.h"
+#import "MainView.h"
 
 
 @implementation DashboardTextCell

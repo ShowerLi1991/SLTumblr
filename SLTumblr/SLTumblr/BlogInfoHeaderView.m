@@ -10,6 +10,7 @@
 #import "UIButton+WebCache.h"
 #import "SLTumblrSDK.h"
 #import "GeometricParameters.h"
+#import "BlogInfo.h"
 
 @implementation BlogInfoHeaderView
 
@@ -115,8 +116,8 @@
         }];
     }
 }
+
 - (void)iconViewClick {
- 
 }
 - (void)postsButtonClick:(UIButton *)button {
 }

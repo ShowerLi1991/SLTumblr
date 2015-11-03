@@ -9,6 +9,7 @@
 #import "BlogChatCell.h"
 #import "ChatModel.h"
 #import "ChatTypeView.h"
+#import "MainView.h"
 
 @implementation BlogChatCell
 

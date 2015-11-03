@@ -9,6 +9,8 @@
 #import "DashboardPhotoCell.h"
 #import "PhotoModel.h"
 #import "PhotoTypeView.h"
+#import "MainView.h"
+
 
 @implementation DashboardPhotoCell
 

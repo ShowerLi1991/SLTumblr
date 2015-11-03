@@ -11,6 +11,10 @@
 #import "GeometricParameters.h"
 #import "UIButton+AFNetworking.h"
 #import "BlogController.h"
+#import "InfoView.h"
+#import "BarView.h"
+#import "PostsModel.h"
+#import "SourceTagsView.h"
 
 @interface KindCell ()
 

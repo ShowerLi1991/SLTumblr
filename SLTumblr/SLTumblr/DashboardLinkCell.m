@@ -9,6 +9,8 @@
 #import "DashboardLinkCell.h"
 #import "LinkTypeView.h"
 #import "LinkModel.h"
+#import "MainView.h"
+
 
 @implementation DashboardLinkCell
 

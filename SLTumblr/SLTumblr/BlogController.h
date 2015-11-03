@@ -7,8 +7,8 @@
 //
 
 #import "BlogColletionViewController.h"
-#import "BlogInfo.h"
 
+@class BlogInfo;
 @interface BlogController : BlogColletionViewController
 
 @property (strong, nonatomic) BlogInfo * blogInfo;

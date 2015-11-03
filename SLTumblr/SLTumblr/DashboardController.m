@@ -9,6 +9,7 @@
 #import "DashboardController.h"
 #import "SLTumblrSDK.h"
 #import "BaseCell.h"
+#import "InfoView.h"
 
 
 @interface DashboardController ()
@@ -20,9 +21,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(rightBarButtonClickChooseType)];
+    
     [self loadDataAndReload:true completionHandler:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dashboardControllerRefresh) name:@"dashboardControllerRefresh" object:nil];
     
+}
+
+- (void)rightBarButtonClickChooseType {
+    //
+    
+    
+    
+    NSLog(@"选择type");
 }
 
 - (void)dashboardControllerRefresh {

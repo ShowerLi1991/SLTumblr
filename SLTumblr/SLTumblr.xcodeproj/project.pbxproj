@@ -322,6 +322,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C06FE011BE8995700F669CB /* RightBarButtonChooseType */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = RightBarButtonChooseType;
+			sourceTree = "<group>";
+		};
 		0C23A2051BC7BBE200F9527A /* SLTumblrSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -703,9 +710,9 @@
 		0CE693DD1BE5B3CC00DCE697 /* Blog */ = {
 			isa = PBXGroup;
 			children = (
+				0CE694351BE6436900DCE697 /* BlogTypeCell */,
 				0CF9C8FF1BE65BDA00D8970D /* BlogInfoHeaderView.h */,
 				0CF9C9001BE65BDA00D8970D /* BlogInfoHeaderView.m */,
-				0CE694351BE6436900DCE697 /* BlogTypeCell */,
 				0CE694661BE64FC600DCE697 /* BlogController.h */,
 				0CE694671BE64FC600DCE697 /* BlogController.m */,
 			);
@@ -872,6 +879,7 @@
 		0CF9F0191BAFA73000F46CE6 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				0C06FE011BE8995700F669CB /* RightBarButtonChooseType */,
 				0C7E4F9D1BCA13F4009975E6 /* DashboardTypeCell */,
 				0CF9F01A1BAFA74000F46CE6 /* NavDashboardController.h */,
 				0CF9F01B1BAFA74000F46CE6 /* NavDashboardController.m */,

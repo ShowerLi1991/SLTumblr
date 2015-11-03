@@ -9,6 +9,8 @@
 #import "BlogQuoteCell.h"
 #import "QuoteTypeView.h"
 #import "QuoteModel.h"
+#import "MainView.h"
+
 
 @implementation BlogQuoteCell
 

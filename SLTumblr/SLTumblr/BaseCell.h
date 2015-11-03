@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "InfoView.h"
-#import "MainView.h"
-#import "BarView.h"
-#import "SourceTagsView.h"
 
-#import "PostsModel.h"
+
+@class PostsModel;
+@class InfoView;
+@class MainView;
+@class BarView;
+@class SourceTagsView;
 
 @interface BaseCell : UICollectionViewCell
 

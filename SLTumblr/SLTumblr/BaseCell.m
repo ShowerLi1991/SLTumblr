@@ -8,6 +8,11 @@
 
 #import "BaseCell.h"
 #import "GeometricParameters.h"
+#import "InfoView.h"
+#import "MainView.h"
+#import "BarView.h"
+#import "SourceTagsView.h"
+#import "PostsModel.h"
 
 @implementation BaseCell
 

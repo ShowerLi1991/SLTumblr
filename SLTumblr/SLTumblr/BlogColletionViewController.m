@@ -35,6 +35,13 @@
 // 可以发布的类型: text, quote, link, video, audio, photo, chat
 // 可以接受的类型: text, quote, link, video, audio, photo, chat, answer
 
+- (instancetype)init {
+    self = [super init];
+    if (self != nil) {
+        self.hidesBottomBarWhenPushed = true;
+    }
+    return self;
+}
 
 - (void)loadView {
     
@@ -67,7 +74,6 @@
     [self.collectionView registerClass:[BlogAudioCell class] forCellWithReuseIdentifier:@"blogAudioCell"];
     [self.collectionView registerClass:[BlogVideoCell class] forCellWithReuseIdentifier:@"blogVideoCell"];
     [self.collectionView registerClass:[BlogAnswerCell class] forCellWithReuseIdentifier:@"blogAnswerCell"];
-    
     
     [self setRefreshController];
 }
