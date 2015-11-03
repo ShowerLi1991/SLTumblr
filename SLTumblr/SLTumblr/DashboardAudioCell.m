@@ -13,7 +13,7 @@
 @implementation DashboardAudioCell
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithType:@"audio"];
+    self = [super initWithKind:@"dashPosts" type:@"audio"];
     if (self) {
     }
     return self;
@@ -40,7 +40,9 @@
     audioView.track_nameLabel.text = trackInfo.copy;
     audioView.embed = dataModel.embed;
     audioView.captionLabel.text = dataModel.caption;
-
+    
+    audioView.audioModel = dataModel;
+    
 }
 
 @end

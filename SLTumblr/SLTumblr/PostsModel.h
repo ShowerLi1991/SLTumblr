@@ -20,8 +20,6 @@
 
 
 // MainView显示信息
-#warning 根据类型不同这里返回的信息不同
-@property (copy, nonatomic) NSString * context_text;
 @property (copy, nonatomic) NSString * reblog_text;
 @property (copy, nonatomic) NSString * source_title;
 @property (copy, nonatomic) NSString * source_url;
@@ -48,7 +46,7 @@
 
 #pragma mark - retuanArrayFromDict
 - (instancetype)initWithDict:(NSDictionary *)dict;
-+ (NSArray *)modelsWithDict:(NSDictionary *)dict;
++ (NSArray *)modelsWithArray:(NSArray *)dict;
 @end
 
 

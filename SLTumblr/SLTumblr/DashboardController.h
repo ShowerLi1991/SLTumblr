@@ -6,11 +6,10 @@
 //  Copyright © 2015年 SL🐰鱼子酱. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DashCollectionViewController.h"
 
-@interface DashboardController : UIViewController
+@interface DashboardController : DashCollectionViewController
 
-- (void)loadData;
 
 
 @end

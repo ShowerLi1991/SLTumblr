@@ -6,8 +6,8 @@
 //  Copyright © 2015年 SL🐰鱼子酱. All rights reserved.
 //
 
-#import "DashboardCell.h"
+#import "KindCell.h"
 
-@interface DashboardTextCell : DashboardCell
+@interface DashboardTextCell : KindCell
 
 @end

@@ -29,7 +29,7 @@
         self.name = dict[@"blog_name"];
         self.icon = [[SLTumblrSDK sharedSLTumblrSDK] avatarURLStringWithBlogName:self.name size:96];
         self.is_root_item = [[dict[@"trail"] firstObject][@"is_root_item"] boolValue];
-#warning 暂时无法获取
+
         self.reblog_name = @"暂无";
         self.followed = [dict[@"followed"] boolValue];
         
@@ -61,7 +61,7 @@
     return self;
 }
 
-+ (NSArray *)modelsWithDict:(NSArray *)arrayDict {
++ (NSArray *)modelsWithArray:(NSArray *)arrayDict {
     NSMutableArray * arr = [NSMutableArray array];
     for (NSDictionary * post in arrayDict) {
         if (post[@"type"] != nil) {

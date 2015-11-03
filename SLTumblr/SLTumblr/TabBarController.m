@@ -33,8 +33,6 @@
     [self setValue:myBar forKey:@"tabBar"];
     
     
-
-    
     DashboardController * dashboard = [[DashboardController alloc] init];
     NavDashboardController * navDashboard = [[NavDashboardController alloc] initWithRootViewController:dashboard];
     dashboard.tabBarItem.title = @"Dashboard";
@@ -49,8 +47,8 @@
     likes.navigationItem.title = @"Likes";
     likes.tabBarItem.image = [[UIImage imageNamed:@"tabbar_likes"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     likes.tabBarItem.selectedImage = [[UIImage imageNamed:@"tabbar_likes_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//    [likes loadData];
-
+    [likes loadDataAndReload:false completionHandler:nil];
+    
     
     DiscoverController * discover = [[DiscoverController alloc] init];
     NavDiscoverController * navDiscover = [[NavDiscoverController alloc] initWithRootViewController:discover];
@@ -72,17 +70,9 @@
     
     self.viewControllers = @[navDashboard, navLikes, navDiscover, navProfile];
 
-
-
 }
 
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-
-    NSLog(@"%@", NSStringFromCGRect(self.view.frame));
-}
 
 
 @end

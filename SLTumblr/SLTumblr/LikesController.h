@@ -6,10 +6,11 @@
 //  Copyright © 2015年 SL🐰鱼子酱. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DashCollectionViewController.h"
 
-@interface LikesController : UIViewController
 
-- (void)loadData;
+@interface LikesController : DashCollectionViewController
+
+- (void)loadDataAndReload:(BOOL)reload completionHandler:(void(^)())handler;
 
 @end

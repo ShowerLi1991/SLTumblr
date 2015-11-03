@@ -24,6 +24,7 @@ static CGFloat const k_bar_height = 38;
 static struct CGSize const k_button_size = {30 , 22};
 static CGFloat const k_text_long_length = 180;
 static CGFloat const k_text_short_length = 60;
+static CGFloat const k_icon_follow_side_length = 64;
 
 
 

@@ -69,6 +69,10 @@
 }
 
 - (void)playButtonClick {
+    
+    [[AudioPlayerController sharedAudioPlayerController] stopPlaying];
+    
+    
     UIResponder * responder = self.nextResponder;
     while (1) {
         responder = responder.nextResponder;

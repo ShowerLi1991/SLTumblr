@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "AudioModel.h"
+#import "TrackLabel.h"
 
 @interface AudioTypeView : UIView
 
 //@property (strong, nonatomic) UILabel * artistLabel;
 
-@property (strong, nonatomic) UILabel * track_nameLabel;
+@property (strong, nonatomic) AudioModel * audioModel;
+@property (strong, nonatomic) TrackLabel * track_nameLabel;
 @property (strong, nonatomic) UILabel * captionLabel;
 @property (strong, nonatomic) Embed * embed;
 

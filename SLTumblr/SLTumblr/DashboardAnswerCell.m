@@ -18,7 +18,7 @@
 
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithType:@"answer"];
+    self = [super initWithKind:@"dashPosts" type:@"answer"];
     if (self) {
     }
     return self;

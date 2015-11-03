@@ -13,7 +13,7 @@
 @implementation DashboardQuoteCell
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithType:@"quote"];
+    self = [super initWithKind:@"dashPosts" type:@"quote"];
     if (self) {
     }
     return self;

@@ -16,7 +16,7 @@
 
 @interface BaseCell : UICollectionViewCell
 
-@property (strong, nonatomic) id dataModel;
+@property (strong, nonatomic) PostsModel * dataModel;
 @property (strong, nonatomic) InfoView * infoView;
 @property (strong, nonatomic) MainView * mainView;
 @property (strong, nonatomic) SourceTagsView * sourceTagsView;

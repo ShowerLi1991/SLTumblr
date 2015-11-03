@@ -13,7 +13,7 @@
 @implementation DashboardLinkCell
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithType:@"link"];
+    self = [super initWithKind:@"dashPosts" type:@"link"];
     if (self) {
     }
     return self;

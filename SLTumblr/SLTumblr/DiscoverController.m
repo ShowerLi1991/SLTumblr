@@ -65,8 +65,8 @@
 
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    NSLog(@"%@ : %@ %@", self.class, NSStringFromSelector(_cmd), self);
     [textField resignFirstResponder];
-    NSLog(@"ReturnClick");
     return true;
 }
 

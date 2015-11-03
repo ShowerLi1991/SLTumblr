@@ -60,7 +60,7 @@
             answerView.tag = 100007;
             typeView = answerView;
         }
-        
+                
         [self addSubview:typeView];
         typeView.translatesAutoresizingMaskIntoConstraints = false;
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[typeView]-0-|" options:0 metrics:nil views:@{@"typeView" : typeView}]];

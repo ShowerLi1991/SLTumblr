@@ -8,6 +8,7 @@
 
 #import "AudioPlayerController.h"
 #import "GeometricParameters.h"
+#import "AudioModel.h"
 
 @interface AudioPlayerController ()
 
@@ -27,7 +28,6 @@
 }
 
 - (void)dismissViewController {
-    NSLog(@"%@ : %@ %@", self.class, NSStringFromSelector(_cmd), self);
     [self dismissViewControllerAnimated:true completion:nil];
 }
 
@@ -35,7 +35,6 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blackColor];
     
-    NSLog(@"%@ : %@ %@", self.class, NSStringFromSelector(_cmd), self);
     _audioPlayerView = [[AudioPlayerView alloc] init];
     [self.view addSubview:_audioPlayerView];
     _audioPlayerView.scrollView.bounces = false;
@@ -70,7 +69,6 @@
 
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"%@ : %@ %@", self.class, NSStringFromSelector(_cmd), self);
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         self.backBar.hidden = false;
@@ -88,6 +86,13 @@
     return _playingScr;
 }
 
+- (NSMutableDictionary *)playModel {
+    if (_playModel == nil) {
+        _playModel = [NSMutableDictionary dictionary];
+    }
+    return _playModel;
+}
+
 - (void)startPlayingWithEmbed:(Embed *)embed {
 
     [self.audioPlayerView stopLoading];
@@ -95,6 +100,9 @@
 }
 
 - (void)stopPlaying {
+    
+    ((AudioModel *)self.playModel[@"playing"]).playing = false;
+    
     [self.audioPlayerView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@""]]];
 }
 

@@ -12,10 +12,11 @@
 
 @implementation DashboardPhotoCell
 
-
 - (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithType:@"photo"];
-    if (self) {
+    
+    self = [super initWithKind:@"dashPosts" type:@"photo"];
+    if (self != nil) {
+        
     }
     return self;
 }

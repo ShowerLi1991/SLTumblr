@@ -21,9 +21,8 @@
             i += (i == 1 ? 2 : 1);
         }
     }
-    self.writeButton.frame = CGRectMake(2 * width + 2, 1, width - 4, height);
-    
-    
+    self.writeButton.frame = CGRectMake(self.frame.size.width * 0.5 - (width - 15) * 0.5, -13, width - 15, height + 12);
+    self.clipsToBounds = false;
 }
 
 
@@ -31,7 +30,10 @@
 - (UIButton *)writeButton {
     if (_writeButton == nil) {
         _writeButton = [[UIButton alloc] init];
-        _writeButton.backgroundColor = [UIColor redColor];
+        [_writeButton setImage:[UIImage imageNamed:@"btn_post_normal"] forState:UIControlStateNormal];
+//        _writeButton.imageEdgeInsets = UIEdgeInsetsMake(-14, 5.5, 2, 5.5);
+        
+        _writeButton.backgroundColor = [UIColor clearColor];
         [self addSubview:_writeButton];
 
     }

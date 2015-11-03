@@ -14,7 +14,7 @@
 @implementation DashboardVideoCell
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithType:@"video"];
+    self = [super initWithKind:@"dashPosts" type:@"video"];
     if (self) {
     }
     return self;

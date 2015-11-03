@@ -14,11 +14,12 @@
 @implementation DashboardTextCell
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithType:@"text"];
-    if (self) {
+    self = [super initWithKind:@"dashPosts" type:@"text"];
+    if (self != nil) {
     }
     return self;
 }
+
 
 - (void)setDataModel:(TextModel *)dataModel {
     [super setDataModel:dataModel];

@@ -13,7 +13,7 @@
 @implementation DashboardChatCell
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithType:@"chat"];
+    self = [super initWithKind:@"dashPosts" type:@"chat"];
     if (self) {
     }
     return self;

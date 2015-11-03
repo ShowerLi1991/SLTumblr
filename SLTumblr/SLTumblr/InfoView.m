@@ -87,7 +87,6 @@
         [self addSubview:_reblogNameButton];
         _reblogNameButton.translatesAutoresizingMaskIntoConstraints = false;
         
-//        [_reblogNameButton addConstraint:[NSLayoutConstraint constraintWithItem:_reblogNameButton attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:k_text_long_length]];
         [_reblogNameButton addConstraint:[NSLayoutConstraint constraintWithItem:_reblogNameButton attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:k_button_size.height]];
 
         _reblogNameButton.xCons = [NSLayoutConstraint constraintWithItem:_reblogNameButton attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeading multiplier:1.0 constant:k_margin_width * 2 + k_icon_button_side_length];
@@ -105,15 +104,22 @@
         _followButton = [[BaseButton alloc] init];
         [_followButton setTitle:@"follow" forState:UIControlStateNormal];
         [_followButton setTitle:@"unfollow" forState:UIControlStateSelected];
+        
+        
+        _followButton.contentEdgeInsets = UIEdgeInsetsMake(0, 4, 0, 4);
+        _followButton.layer.cornerRadius = 4;
+        [_followButton.layer setBorderWidth:1];
+        [_followButton.layer setBorderColor:[UIColor blackColor].CGColor];
+        
+        
         _followButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         [_followButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [self addSubview:_followButton];
         _followButton.translatesAutoresizingMaskIntoConstraints = false;
         
-        [_followButton addConstraint:[NSLayoutConstraint constraintWithItem:_followButton attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:k_text_short_length]];
         [_followButton addConstraint:[NSLayoutConstraint constraintWithItem:_followButton attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:k_button_size.height]];
 
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:_followButton attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeading multiplier:1.0 constant:k_cell_width - k_margin_width - k_text_short_length]];
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:_followButton attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:-k_margin_width]];
         [self addConstraint:[NSLayoutConstraint constraintWithItem:_followButton attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:k_margin_height + (k_icon_button_side_length - k_button_size.height) * 0.5]];
     }
     return _followButton;

@@ -52,6 +52,8 @@
     return self;
 }
 
-
+- (void)setDataModel:(PostsModel *)dataModel {
+    _dataModel = dataModel;
+}
 
 @end

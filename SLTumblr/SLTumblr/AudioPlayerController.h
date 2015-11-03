@@ -12,6 +12,7 @@
 
 @interface AudioPlayerController : UIViewController
 
+@property (strong, nonatomic) NSMutableDictionary * playModel;
 @property (strong, nonatomic) AudioPlayerView * audioPlayerView;
 @property (strong, nonatomic) NSMutableDictionary * playingScr;
 
