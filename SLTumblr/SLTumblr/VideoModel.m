@@ -40,7 +40,7 @@
 }
 
 - (void)parserWithEmbedArray:(NSArray *)player {
-    NSData * embedStringData = [[player lastObject] dataUsingEncoding:NSUTF8StringEncoding];
+    NSData * embedStringData = [[player lastObject][@"embed_code"] dataUsingEncoding:NSUTF8StringEncoding];
     NSXMLParser * parser = [[NSXMLParser alloc] initWithData:embedStringData];
     parser.delegate = self;
     [parser parse];
